@@ -102,7 +102,7 @@ export class Step10 extends React.Component<RootProps, Step10State> {
       detail: (
         <List type="number">
           <List.Item>
-            访问TKE Stack控制台：
+            访问数码容器云控制台：
             <ExternalLink href={clusterProgress.data.record['url']}>{clusterProgress.data.record['url']}</ExternalLink>
             <List type="bullet">
               <List.Item>
@@ -129,7 +129,7 @@ export class Step10 extends React.Component<RootProps, Step10State> {
                 </Button>
               </List.Item>
               <Text theme="label">
-                TKE
+                数码容器云
                 global集群的访问凭证信息存储在：部署节点/opt/tke-installer/data/目录下，您可以在此目录再次查看以上信息，关于kubeclt
                 的配置，请参考
                 <ExternalLink href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/">

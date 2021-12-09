@@ -33,7 +33,7 @@ export class Step7 extends React.Component<RootProps> {
             <Segment
               value={editState.monitorType}
               options={[
-                { text: 'TKE提供', value: 'tke-influxdb' },
+                { text: '平台提供', value: 'tke-influxdb' },
                 { text: '外部InfluxDB', value: 'external-influxdb' },
                 { text: '外部ES', value: 'es' },
                 { text: '不使用', value: 'none' }
@@ -42,11 +42,11 @@ export class Step7 extends React.Component<RootProps> {
             />
             <div className="tea-form__help-text">
               {editState.monitorType === 'tke-influxdb'
-                ? 'TKE默认将安装InfluxDB作为监控数据存储'
+                ? '平台默认将安装InfluxDB作为监控数据存储'
                 : editState.monitorType === 'external-influxdb'
-                ? '使用您提供的InfluxDB作为监控数据存储，TKE将不再安装监控存储组件'
+                ? '使用您提供的InfluxDB作为监控数据存储，平台将不再安装监控存储组件'
                 : editState.monitorType === 'es'
-                ? '使用您提供的Elasticsearch作为监控数据的存储，TKE将不再安装监控存储组件'
+                ? '使用您提供的Elasticsearch作为监控数据的存储，平台将不再安装监控存储组件'
                 : '不安装监控存储组件，将导致平台不提供监控服务，请谨慎选择'}
             </div>
             {editState.monitorType === 'es' ? (

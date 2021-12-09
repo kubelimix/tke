@@ -77,7 +77,7 @@ export class ResultPanel extends React.Component<RootProps, ResultPanelState> {
     const { clusterProgress } = this.props;
     return (
       <div style={{ maxWidth: '1000px', minHeight: '600px', margin: '0 auto' }}>
-        <h2 style={{ margin: '40px 0px', fontWeight: 600 }}>TKE Enterprise 安装初始化</h2>
+        <h2 style={{ margin: '40px 0px', fontWeight: 600 }}>数码容器云安装初始化</h2>
         <Card>
           <Card.Body>
             <li>
@@ -111,7 +111,7 @@ export class ResultPanel extends React.Component<RootProps, ResultPanelState> {
                       安装中...
                     </span>
                   ) : clusterProgress.data.record['status'] === 'Success' ? (
-                    <span>访问TKE控制台</span>
+                    <span>访问数码容器云控制台</span>
                   ) : (
                     <span>安装失败</span>
                   )}
@@ -228,7 +228,7 @@ export class ResultPanel extends React.Component<RootProps, ResultPanelState> {
                             <div className="content-inner" style={{ display: 'block' }}>
                               <h4>访问控制台</h4>
                               <p>
-                                现在可访问TKE Enterprise控制台：
+                                现在可访问数码容器云控制台：
                                 <ExternalLink href={clusterProgress.data.record['url']}>
                                   {clusterProgress.data.record['url']}
                                 </ExternalLink>

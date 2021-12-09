@@ -29,7 +29,7 @@ export class Step1 extends React.Component<RootProps> {
         <Form>
           <Form.Item>
             <Form.Text>
-              感谢您选择TKEStack，TKEStack遵循Apache LICENSE 2.0（许可），您可以在此查看许可原文：
+              感谢您选择数码容器云，数码容器云遵循Apache LICENSE 2.0（许可），您可以在此查看许可原文：
               <ExternalLink href="http://www.apache.org/licenses/LICENSE-2.0">
                 http://www.apache.org/licenses/LICENSE-2.0
               </ExternalLink>

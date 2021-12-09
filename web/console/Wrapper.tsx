@@ -103,17 +103,17 @@ const commonRouterConfig: RouterConfig[] = [
     subRouterConfig: [
       {
         url: '/tkestack/registry/repo',
-        title: '镜像仓库管理',
+        title: '镜像仓库',
         watchModule: ConsoleModuleEnum.Registry
       },
       // {
       //   url: '/tkestack/registry/chartgroup',
-      //   title: 'Helm仓库',
+      //   title: '应用仓库',
       //   watchModule: ConsoleModuleEnum.Registry
       // },
       {
         url: '/tkestack/registry/chart',
-        title: 'Helm模板',
+        title: '应用模板',
         watchModule: ConsoleModuleEnum.Registry
       },
       {
@@ -140,7 +140,7 @@ const commonRouterConfig: RouterConfig[] = [
     ]
   },
   {
-    title: '监控&告警',
+    title: '监控告警',
     watchModule: [ConsoleModuleEnum.Monitor, ConsoleModuleEnum.Notify],
     subRouterConfig: [
       {
@@ -216,7 +216,7 @@ const businessCommonRouterConfig: RouterConfig[] = [
     subRouterConfig: [
       {
         url: '/tkestack-project/registry/repo',
-        title: '镜像仓库管理',
+        title: '镜像仓库',
         watchModule: ConsoleModuleEnum.Registry
       },
       // {
@@ -226,7 +226,7 @@ const businessCommonRouterConfig: RouterConfig[] = [
       // },
       {
         url: '/tkestack-project/registry/chart',
-        title: 'Helm模板',
+        title: '应用模板',
         watchModule: ConsoleModuleEnum.Registry
       },
       {
@@ -237,7 +237,7 @@ const businessCommonRouterConfig: RouterConfig[] = [
     ]
   },
   {
-    title: '监控&告警',
+    title: '监控告警',
     watchModule: [ConsoleModuleEnum.Monitor, ConsoleModuleEnum.Notify],
     subRouterConfig: [
       {
@@ -584,10 +584,6 @@ export class Wrapper extends React.Component<ConsoleWrapperProps, ConsoleWrapper
         }
         right={
           <React.Fragment>
-            <NavMenu.Item>
-              <ExternalLink href={'https://tkestack.github.io/docs/'}>容器服务帮助手册</ExternalLink>
-            </NavMenu.Item>
-
             <NavMenu.Item
               type="dropdown"
               overlay={() => (

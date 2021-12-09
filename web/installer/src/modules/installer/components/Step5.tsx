@@ -33,15 +33,15 @@ export class Step5 extends React.Component<RootProps> {
             <Segment
               value={editState.repoType}
               options={[
-                { text: 'TKE提供', value: 'tke' },
+                { text: '平台提供', value: 'tke' },
                 { text: '第三方仓库', value: 'thirdParty' }
               ]}
               onChange={value => actions.installer.updateEdit({ repoType: value, application: true })}
             />
             <div className="tea-form__help-text">
               {editState.repoType === 'tke'
-                ? 'TKE将根据设置的信息安装镜像仓库服务'
-                : 'TKE将不会安装镜像仓库服务，使用您提供的镜像仓库作为默认镜像仓库服务'}
+                ? '平台将根据设置的信息安装镜像仓库服务'
+                : '平台将不会安装镜像仓库服务，使用您提供的镜像仓库作为默认镜像仓库服务'}
             </div>
             {editState.repoType === 'tke' ? (
               <div className="run-docker-box" style={{ marginTop: '10px', width: '100%' }}>

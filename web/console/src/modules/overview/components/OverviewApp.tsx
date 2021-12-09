@@ -77,7 +77,6 @@ class OverviewApp extends React.Component<RootProps, {}> {
             </Col>
             <Col span={6}>
               <QuickHelpPanel />
-              <TipsPanel />
             </Col>
           </Row>
         </ContentView.Body>

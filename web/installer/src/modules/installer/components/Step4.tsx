@@ -33,13 +33,13 @@ export class Step4 extends React.Component<RootProps> {
             <Segment
               value={editState.authType}
               options={[
-                { text: 'TKE提供', value: 'tke' },
+                { text: '平台提供', value: 'tke' },
                 { text: 'OIDC认证', value: 'oidc' }
               ]}
               onChange={value => actions.installer.updateEdit({ authType: value })}
             />
             <div className="tea-form__help-text">
-              {editState.authType === 'tke' ? '使用TKE提供的用户认证功能' : '接入已有的OIDC认证'}
+              {editState.authType === 'tke' ? '使用平台提供的用户认证功能' : '接入已有的OIDC认证'}
             </div>
             {editState.authType === 'oidc' ? (
               <div className="run-docker-box" style={{ marginTop: '10px', width: '100%' }}>

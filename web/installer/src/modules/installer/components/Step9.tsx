@@ -44,7 +44,7 @@ export class Step9 extends React.Component<RootProps> {
         <Form>
           <Form.Item label="高可用类型">
             <Form.Text>
-              {editState.haType === 'tke' ? 'TKE提供' : editState.haType === 'thirdParty' ? '使用已有' : '不设置'}
+              {editState.haType === 'tke' ? '平台提供' : editState.haType === 'thirdParty' ? '使用已有' : '不设置'}
             </Form.Text>
           </Form.Item>
           {editState.haType === 'tke' ? (

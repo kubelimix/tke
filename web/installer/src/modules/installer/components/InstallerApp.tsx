@@ -104,7 +104,7 @@ class InstallerApp extends React.Component<RootProps> {
                   margin: '0 auto'
                 }}
               >
-                <h2 style={{ margin: '40px 0px', fontWeight: 600 }}>TKE Stack</h2>
+                <h2 style={{ margin: '40px 0px', fontWeight: 600 }}>数码云安装器</h2>
                 <Row>
                   <Col span={4}>
                     <Stepper type="process-vertical" current={step} steps={steps} />

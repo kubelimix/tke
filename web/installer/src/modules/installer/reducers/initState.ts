@@ -94,7 +94,7 @@ export const initEdit: EditState = {
   repoType: 'tke',
   repoTenantID: '',
   v_repoTenantID: initValidation,
-  repoSuffix: 'registry.tke.com',
+  repoSuffix: 'registry.kxdigit.com',
   v_repoSuffix: initValidation,
   repoAddress: '',
   v_repoAddress: initValidation,
@@ -134,7 +134,7 @@ export const initEdit: EditState = {
 
   // 控制台设置
   openConsole: true,
-  consoleDomain: 'console.tke.com',
+  consoleDomain: 'console.kxdigit.com',
   v_consoleDomain: initValidation,
   certType: 'selfSigned',
   certificate: '',

@@ -55,21 +55,6 @@ export function QuickHelpPanel() {
               创建角色
             </Button>
           </List.Item>
-          <List.Item>
-            <img
-              src="/static/icon/overviewGithub.svg"
-              style={{ height: '30px', verticalAlign: 'middle', marginRight: 10 }}
-              alt="logo"
-            />
-            <Button
-              type={'link'}
-              onClick={() => {
-                location.href = 'https://github.com/tkestack/tke/issues';
-              }}
-            >
-              github-issue
-            </Button>
-          </List.Item>
         </List>
       </Card.Body>
     </Card>

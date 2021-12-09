@@ -82,7 +82,7 @@ export class Step2 extends React.Component<RootProps> {
               value={editState.haType}
               options={[
                 { value: 'none', text: '不设置' },
-                { value: 'tke', text: 'TKE提供' },
+                { value: 'tke', text: '平台提供' },
                 { value: 'thirdParty', text: '使用已有' }
               ]}
               onChange={value => actions.installer.updateEdit({ haType: value })}
@@ -99,7 +99,7 @@ export class Step2 extends React.Component<RootProps> {
                         {editState.v_haTkeVip.message}{' '}
                         <p>
                           <Text theme={'label'} reset>
-                            {'用户提供可用的IP地址，TKE部署Keepalive，配置该IP为Master集群的VIP'}
+                            {'用户提供可用的IP地址，平台部署Keepalive，配置该IP为Master集群的VIP'}
                           </Text>
                         </p>
                       </>
