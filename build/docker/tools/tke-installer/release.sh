@@ -87,8 +87,8 @@ function prepare::tke_installer() {
 
 function build::installer_image() {
   local -r arch="$1"
-
-  docker build --platform="${arch}" --build-arg ENV_ARCH="${arch}" --pull -t "${REGISTRY_PREFIX}/tke-installer-${arch}:$VERSION" -f "${SCRIPT_DIR}/Dockerfile" "${DST_DIR}"
+  echo "docker build --platform=\"${arch}\" --build-arg ENV_ARCH=\"${arch}\" --load -t \"${REGISTRY_PREFIX}/tke-installer-${arch}:$VERSION\" -f \"${SCRIPT_DIR}/Dockerfile\" \"${DST_DIR}\""
+  docker -D build --platform="${arch}" --build-arg ENV_ARCH="${arch}" --load -t "${REGISTRY_PREFIX}/tke-installer-${arch}:$VERSION" -f "${SCRIPT_DIR}/Dockerfile" "${DST_DIR}"
 }
 
 function build::installer() {
@@ -136,7 +136,7 @@ function prepare::images() {
   make build BINS=generate-images VERSION="$VERSION"
 
   $GENERATE_IMAGES_BIN
-  $GENERATE_IMAGES_BIN | sed "s;^;${REGISTRY_PREFIX}/;" | xargs -n1 -I{} sh -c "docker --config=${DOCKER_PULL_CONFIG} pull {} || exit 255"
+  # $GENERATE_IMAGES_BIN | sed "s;^;${REGISTRY_PREFIX}/;" | xargs -n1 -I{} sh -c "docker --config=${DOCKER_PULL_CONFIG} pull {} || exit 255"
   $GENERATE_IMAGES_BIN | sed "s;^;${REGISTRY_PREFIX}/;" | xargs docker save | gzip -c >"${DST_DIR}"/images.tar.gz
 }
 

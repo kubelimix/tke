@@ -72,6 +72,7 @@ docker.build.%:  docker.verify
 	@echo "===========> Building docker image $(IMAGE) $(VERSION) for $(IMAGE_PLAT)"
 
 	$(eval BUILD_SUFFIX := $(_DOCKER_BUILD_EXTRA_ARGS) --pull -t $(REGISTRY_PREFIX)/$(IMAGE)-$(ARCH):$(VERSION) $(WORK_DIR))
+	echo "$(DOCKER) build --platform $(IMAGE_PLAT) $(BUILD_SUFFIX)"
 	$(DOCKER) build --platform $(IMAGE_PLAT) $(BUILD_SUFFIX)
 
 .PHONY: docker.push.%
