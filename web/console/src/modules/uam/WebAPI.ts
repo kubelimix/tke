@@ -288,7 +288,7 @@ export async function fetchStrategyList(query: QueryState<StrategyFilter>) {
   const queryObj = {
     fieldSelector: {
       [key]: 'project',
-      keyword: search || ''
+      keyword: search || ' '
     }
     // continue: undefined,
     // limit: paging.pageSize
