@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.box-small {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.box-small-left {
+    width: 55.8%;
+    height: 100%;
+    background: url("/oidc/static/img/dly.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.box-small-right {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-small .box-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.box-small .box-form label {
+    display: flex;
+    align-items: center;
+    width: 437px;
+    height: 55px;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: solid 1px #9b9b9b;
+    overflow: hidden;
+}
+
+.box-small label img {
+    margin: 5px 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.box-small label input {
+    outline: transparent;
+    height: 100%;
+    border: none;
+    background: transparent;
+}
+
+.box-small .box-form button {
+    display: block;
+    margin: auto;
+    width: 437px;
+    height: 55px;
+    background: #098dee;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 50px;
+    font-size: 16px;
+}
+.box-small .login-flex-warp {
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+.box-small .error-msg {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+.box-small .chechbox-warp {
+    display: flex;
+    align-items: center;
+}
+.box-small .chechbox-warp input {
+    width: 14px;
+    height: 14px;
+}
+.box-small .showMsg {
+    display: block;
+}
+.box-small .agree {
+    color: #666;
+    margin-left: 10px;
+}

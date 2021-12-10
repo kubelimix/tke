@@ -25,29 +25,14 @@
                 <h2>数码容器服务</h2>
             </div>
             <div class="box-form">
-                <form action="{{ .PostURL }}" name="form" method="post" onsubmit="return checkForm()">
+                <form action="" name="form" method="post" onsubmit="return checkForm()">
                     <label>
-                        <img src="/oidc/static/img/user-icon.png" alt="">
-                        <!-- <input type="text" name="username" id="text" value="" placeholder="请输入用户名" /> -->
-                        <input required id="login" name="login"
-                                                    {{ if .Username }} value="{{ .Username }}" {{ else }} autofocus {{ end }}
-                                                    type="text"
-                                                    class="clg-input J-username"
-                                                    placeholder="Username"/>
+                        <img src="img/user-icon.png" alt="">
+                        <input type="text" name="username" id="text" value="" placeholder="请输入用户名" />
                     </label>
                     <label>
-                        <img src="/oidc/static/img/password-icon.png" alt="">
-                        <!-- <input type="password" name="password" id="password" value="" placeholder=" 请输入密码" /> -->
-                        <input
-                                                    type="password"
-                                                    required id="password"
-                                                    value=""
-                                                    name="password"
-                                                    class="clg-input J-password"
-                                                    placeholder="Password"
-                                                    {{ if .Invalid }} autofocus {{ end }}
-                                            />
-
+                        <img src="img/password-icon.png" alt="">
+                        <input type="password" name="password" id="password" value="" placeholder=" 请输入密码" />
                     </label>
                     <div class="error-msg hideMsg"></div>
                     <button type="submit">登 录</button>
@@ -69,7 +54,7 @@
     <div id="showHome" class="box">
         <section class="screen-1" id="study1">
             <section class="screen-1__practice-courses">
-                <button id="loginbutton" class="btn fr">立刻登录</button>
+                <button id="login" class="btn fr">立刻登录</button>
                 <!-- <div id="userInfo" class='fr disNone userInfo'>
                     <span id="userName" class="userName"></span><span class="userName">, 你好</span>
                     <button id="loginOut" class="btn-logout">注销</button>
@@ -98,8 +83,8 @@
         <section class="screen-2">
             <section class="intro container">
                 <div class=title>简 介</div>
-                <div class="intro-body">数码容器服务基于原生 kubernetes
-                    提供以容器为核心、高度可扩展的高性能容器管理服务。完全
+                <div class="intro-body">数码容器服务（Tencent Kubernetes Engine ，TKE）基于原生 kubernetes
+                    提供以容器为核心、高度可扩展的高性能容器管理服务。TKE完全
                     兼容原生 kubernetes API ，扩展了数码的云硬盘（Cloud Block Storage, CBS）、负载均衡 （Cloud Load Balancer, CLB）等kubernetes
                     插
                     件，为容器化的应用提供高效部署、资源调度、服务发现和动态伸缩等一系列完整功能，解决用户开发、测试及运维过程的环境一致性问题，&nbsp;&nbsp;&nbsp;&nbsp;
@@ -293,15 +278,15 @@
             <div class="title">开发者资源</div>
             <div class="flex-warp">
                 <div class="card-item">
-                    <div>控制台</div>
+                    <div>TKE控制台</div>
                     <img src="/oidc/static/img/kzt.png" alt="">
                 </div>
                 <div class="card-item">
-                    <div>平台文档</div>
+                    <div>TKE文档</div>
                     <img src="/oidc/static/img/tkewd.png" alt="">
                 </div>
                 <div class="card-item">
-                    <div>API文档</div>
+                    <div>TKE API文档</div>
                     <img src="/oidc/static/img/apiwd.png" alt="">
                 </div>
                 <div class="card-item">

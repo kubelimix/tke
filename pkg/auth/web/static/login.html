@@ -1,0 +1,52 @@
+<!--
+ * @Author: mjzhu
+ * @Date: 2021-12-09 09:29:53
+ * @LastEditTime: 2021-12-09 20:05:51
+ * @FilePath: \static-web\login.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>登录页面</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+  <div class="box-small">
+    <div class="box-small-left"></div>
+    <div class="box-small-right">
+      <div class="box-title">
+        <h2>数码容器服务</h2>
+      </div>
+      <div class="box-form">
+        <label>
+          <img src="img/user-icon.png" alt="">
+          <input type="text" name="username" id="text" value="" placeholder="请输入用户名" />
+        </label>
+        <label>
+          <img src="img/password-icon.png" alt="">
+          <input type="password" name="password" id="password" value="" placeholder=" 请输入密码" />
+        </label>
+        <div class="error-msg hideMsg"></div>
+        <button type="button" id="login">登 录</button>
+        <div class="flex-warp">
+          <div class="chechbox-warp">
+            <input id="rember" name="rember" type="checkbox">
+            <span id="agree" class="agree">记住登录信息</span>
+          </div>
+          <div class="chechbox-warp">
+            <input id="auto" name="auto" type="checkbox">
+            <span class="agree">自动登录</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box-footer">
+  </div>
+</body>
+<script src="./js/login.js"></script>
+
+</html>

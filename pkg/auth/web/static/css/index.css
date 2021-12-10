@@ -1,0 +1,450 @@
+/*container*/
+.container {
+    width: 1200px;
+}
+
+/*screen-1*/
+.screen-1 {
+    height: 425px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+}
+
+.screen-1__practice-courses {
+    background: url("../img/banner.png")no-repeat center;
+    height: 425px;
+    background-size: 100% 100%;
+}
+
+.flex-container {
+    padding: 8% 13.1% 0;
+}
+
+.fr {
+    float: right;
+}
+
+.flex-container img {
+    width: 57px;
+    height: 41px;
+}
+
+.flex-container span {
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-left: 0.6%;
+}
+
+.flex-container p {
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 26px;
+    margin-top: .6%;
+}
+
+.flex-container button {
+    width: 120px;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    background: #fff;
+    color: #0091FF;
+    border-radius: 4px;
+    margin-top: 0.9%;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.flex-container button:hover {
+    color: #fff;
+    background: #0091FF;
+}
+
+.btn {
+    margin: 2% 1.7%;
+    width: 88px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    /* background: #333; */
+    color: #fff;
+    background: transparent;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 1px solid #0091FF;
+    color: #0091FF;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+/* nav */
+.nav-div {
+    position: absolute;
+    bottom: 0;
+    height: 56px;
+    line-height: 56px;
+}
+
+.nav-ul {
+    display: flex;
+    margin: 0 auto;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+}
+
+.li-item {
+    width: 20%;
+    cursor: pointer;
+}
+
+.li-item:hover {
+    color: #0091FF;
+}
+
+/*screen-2*/
+.screen-2 {
+    width: 100%;
+    background: #fff;
+    height: 285px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.intro {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 285px;
+    width: 1024px;
+}
+
+.title {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.85);
+    letter-spacing: 0;
+}
+
+.second-title {
+    margin: 20px 0;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.85);
+    letter-spacing: 0;
+}
+
+.intro .intro-body {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.65);
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 28px;
+    margin-top: 2.0%;
+}
+
+/*screen-3*/
+.screen-3 {
+    height: 706px;
+    background-color: #F7F8FA;
+    position: relative;
+    padding: 46px 13%;
+    text-align: center;
+}
+
+.flex-warp {
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.flex-warp img {
+    /* width: 35px; */
+    /* height: 40px; */
+}
+
+.warp-item {
+    width: 28%;
+}
+
+.pdr110 {
+    padding:0 55px;
+    line-height: 26px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+/*screen-4*/
+.screen-4 {
+    /* opacity: 0.06; */
+    /* min-height: 398px; */
+    background: rgba(232, 231, 258, 0.6);
+    text-align: center;
+    padding: 46px 13%;
+}
+
+.flex-around {
+    display: flex;
+}
+
+.flex-around ul {
+    text-align: left;
+}
+
+.flex-around .ul-container:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #e5e5e5;
+}
+
+.active:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 40px !important;
+    background-color: #00a4ff;
+    left: auto;
+    bottom: 0;
+    z-index: 1;
+}
+
+.flex-around li {
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    padding-right: 50px;
+    position: relative;
+}
+
+.flex-around .tab-panel {
+    flex: 1;
+    text-align: left;
+    line-height: 24px;
+    font-size: 16px;
+    padding-left: 7%;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 26px;
+}
+
+.flex-around .ul-container {
+    width: 22%;
+    position: relative;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.showBlock {
+    display: block;
+}
+
+.active {
+    color: #00a4ff;
+}
+
+.panel-inrto {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.screen-4__heading {
+    font-size: 42px;
+    text-align: center;
+    padding-top: 89px;
+}
+
+/*screen-5*/
+.screen-5 {
+    min-height: 537px;
+    background: #fff;
+    text-align: center;
+    padding: 46px 13%;
+    position: relative;
+}
+
+.c-tab-normal {
+    margin-top: 30px;
+}
+
+.c-tab-normal ul {
+    border-bottom: #e5e5e5 2px solid;
+    position: relative;
+    font-size: 0;
+    display: table;
+    width: 100%;
+}
+
+.c-tab-normal ul li {
+    border: 0;
+    position: relative;
+    min-width: 145px;
+    vertical-align: bottom;
+    display: table-cell;
+}
+
+.c-tab-normal ul li a {
+    padding: 20px 1.68%;
+    display: block;
+    text-decoration: none;
+}
+
+.c-tab-normal li.actived:after {
+    display: inline-block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    background: #00a4ff;
+    z-index: 1;
+}
+
+.c-tab-normal ul li.actived a span {
+    color: #2E71E6;
+
+}
+
+.c-tab-normal ul li a span {
+    display: block;
+    color: #333;
+    font-size: 18px;
+}
+
+.c-tab-normal ul li a span:hover {
+    color: #2E71E6;
+}
+
+.c-tab-panel {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    margin: 40px auto 0;
+    display: none;
+}
+
+.c-tab-panel img {
+    margin-top: 16px;
+    width: 820px;
+    height: 294px;
+}
+
+.screen-others_btn:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /*给即刻学习体验按钮添加环绕四周阴影,形如'0px 0px 10px',如果0px有值则为按钮有下侧有效果*/
+    transition: all .5s;
+    /*按钮过渡渐变动画*/
+    color: #717171;
+}
+
+.showFlex {
+    display: flex !important;
+}
+
+/* screen-6 */
+.screen-6 {
+    min-height: 537px;
+    padding: 46px 13%;
+    text-align: center;
+    background: #F7F8FA;
+}
+
+.screen-6 .flex-warp {
+    justify-content: center;
+}
+
+.card-item {
+    width: 25%;
+    border: 2px solid rgba(0, 0, 0, 0.10);
+    height: 160px;
+    margin: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    align-items: center;
+}
+
+/*footer*/
+.footer {
+    background-color: #000;
+    position: relative;
+    height: 287px;
+}
+
+.footer-container {
+    width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0 0 0;
+}
+
+.footer-item {
+    width: 25%;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.footer-item a {
+    font-size: 12px;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    margin: 8px 0;
+}
+
+.disNone {
+    display: none!important;
+}
+
+.userInfo {
+    display: flex;
+    margin: 0.7% 1.7%;
+    align-items: center;
+}
+
+.userName {
+    font-size: 14px;
+    color: #0091FF;
+    text-align: right;
+}
+.btn-logout {
+    border: 1px solid #FFFFFF;
+    background: transparent;
+    width: 60px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.line-height26 {
+    line-height: 26px;
+}
+.pdf0 {
+    padding-left: 0!important;
+}
+.pdr0 {
+    padding-right: 0!important;
+}

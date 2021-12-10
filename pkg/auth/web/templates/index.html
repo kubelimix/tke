@@ -1,0 +1,313 @@
+<!--
+ * @Author: mjzhu
+ * @Date: 2021-12-09 09:29:53
+ * @LastEditTime: 2021-12-10 10:40:13
+ * @FilePath: \static-web\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>容器服务首页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+    <div class="box">
+        <section class="screen-1" id="study1">
+            <section class="screen-1__practice-courses">
+                <button id="login" class="btn fr">立刻登录</button>
+                <div id="userInfo" class='fr disNone userInfo'>
+                    <span id="userName" class="userName"></span><span class="userName">, 你好</span>
+                    <button id="loginOut" class="btn-logout">注销</button>
+                </div>
+                <div class='flex-container'>
+                    <div class="flex-center">
+                        <img src="./img/yun.svg" />
+                        <span>容器服务</span>
+                    </div>
+                    <p>稳定、安全、高效、灵活扩展、简单易用的 Kubernetes 容器管理平台</p>
+                    <button>马上开始</button>
+                </div>
+                <!-- nav -->
+                <div style="width: 100%" class="nav-div">
+                    <ul class="nav-ul container">
+                        <li class="li-item">简介</li>
+                        <li class="li-item">特性</li>
+                        <li class="li-item">功能</li>
+                        <li class="li-item">应用场景</li>
+                        <li class="li-item">开发者资源</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <!--screen2-->
+        <section class="screen-2">
+            <section class="intro container">
+                <div class=title>简 介</div>
+                <div class="intro-body">数码容器服务（Tencent Kubernetes Engine ，TKE）基于原生 kubernetes
+                    提供以容器为核心、高度可扩展的高性能容器管理服务。TKE完全
+                    兼容原生 kubernetes API ，扩展了数码的云硬盘（Cloud Block Storage, CBS）、负载均衡 （Cloud Load Balancer, CLB）等kubernetes
+                    插
+                    件，为容器化的应用提供高效部署、资源调度、服务发现和动态伸缩等一系列完整功能，解决用户开发、测试及运维过程的环境一致性问题，&nbsp;&nbsp;&nbsp;&nbsp;
+                    提高了大规模容器集群管理的便捷性，帮助用户降低成本，提高效率。容器服务提供免费使用，涉及的其他云产品另外单独计费。</div>
+            </section>
+        </section>
+        <!--screen3-->
+        <section class="screen-3">
+            <div class="title">特性</div>
+            <div class="flex-warp" style="height: 676px;">
+                <div class="warp-item pdr110 pdf0">
+                    <img src="./img/stky.svg" alt="">
+                    <div class="second-title">生态开源</div>
+                    <div>数码容器服务完全兼容 kubernetes 全能力，适
+                        配了数码云服务器（Cloud Virtual Machine,
+                        CVM）、云硬盘（Cloud Block Storage, CBS）等
+                        IAAS 的基本能力。同时数码提供的基于
+                        kubernetes 开放的云硬盘 CBS、负载均衡 CLB等
+                        云产品，支持多种开源应用一键部署到容器集群
+                        中，极大提升部署效率。</div>
+                </div>
+                <div class="warp-item pdr110">
+                    <img src="./img/aqkk.svg" alt="">
+                    <div class="second-title">安全可靠</div>
+                    <div>容器服务启动于专用云服务器实例中，独享计算资
+                        源。集群运行在私有网络，支持自定义安全组和网
+                        络 ACL。容器服务采用分布式服务架构，实现服务
+                        故障自动修复、数据快速迁移；结合有状态服务后
+                        端的分布式存储，实现高可用服务和数据的安全。</div>
+                </div>
+                <div class="warp-item pdr110 pdr0">
+                    <img src="./img/jdyy.svg" alt="">
+                    <div class="second-title">简单易用</div>
+                    <div>使用容器服务，您无需再使用集群管理软件和设计
+                        容错集群架构，便可简化大规模集群管理和分布式
+                        应用的管理、运维。您只需启动容器集群，并指定
+                        想要运行的任务，容器服务即可帮您完成所有的集
+                        群管理工作，让您专心投入开发 Docker 化的应用
+                        程序。</div>
+                </div>
+                <div class="warp-item pdr110 pdf0">
+                    <img src="./img/gxbs.svg" alt="">
+                    <div class="second-title">高效部署</div>
+                    <div>容器服务运行在高品质的 BGP 网络中，能够实现
+                        镜像极速下载和上传，海量容器秒级启动，提高容
+                        器部署效率；容器服务可对提交的业务代码进行快
+                        速构建、测试和打包集成，将集成的代码部署到预
+                        发布环境和现网环境上。</div>
+                </div>
+                <div class="warp-item pdr110">
+                    <img src="./img/lhkz.svg" alt="">
+                    <div class="second-title">灵活扩展</div>
+                    <div>容器服务支持灵活集群托管，便于安排长期运行的
+                        应用程序和批量作业，以便扩展您的业务。容器服
+                        务同时集成负载均衡，支持在多个容器之间分配流
+                        量，自动恢复运行状况不佳的容器，保证容器数量
+                        满足您的需求，以便为应用程序提供支持。</div>
+                </div>
+                <div class="warp-item pdr110 pdr0">
+                    <img src="./img/dcb.svg" alt="">
+                    <div class="second-title">低成本</div>
+                    <div>容器服务本身不收取费用，您可以在容器中免费调
+                        用 API 构建您的集群管理程序。另外您使用容器服
+                        务时，创建的用于存储和运行应用程序的云服务资
+                        源（如云服务器、云硬盘等）仍按正常标准计费。</div>
+                </div>
+            </div>
+        </section>
+        <!--screen4-->
+        <section class="screen-4">
+            <div class="title">功能</div>
+            <div class="second-title">容器服务提供多种强大功能，包括集群管理、服务管理、配置管理和镜像管理。</div>
+            <div class="flex-around">
+                <div class="ul-container">
+                    <ul>
+                        <li class="filter active">集群管理</li>
+                        <li class="filter">服务管理</li>
+                        <li class="filter">配置管理</li>
+                        <li class="filter">镜像管理</li>
+                    </ul>
+                </div>
+                <div class="tab-panel showBlock">支持集群动态伸缩，节点支持升降配。<br />
+                    集群内节点跨可用区管理部署，服务内容器跨可用区调度。<br />
+                    集群内节点监控指标丰富，支持自定义集群告警策略。</div>
+                <div class="tab-panel">
+                    <div>
+                        <div class="panel-title">提升服务部署效率</div>
+                        <div class="panel-inrto">
+                            通过模板控制服务版本，镜像保证环境一致，使服务迁移扩展更加迅速。<br />
+                            支持服务发现，可通过负载均衡域名或服务名称加端口访问服务，可避免服务后端变化时 IP 变更带来的影响。<br />
+                            支持微服务化，降低代码维护成本，适应快速变化的业务需求。<br />
+                        </div>
+                    </div>
+                    <div>
+                        <div>动态扩缩服务</div>
+                        <div class="panel-inrto">
+
+                            服务灵活水平扩展，应对业务快速变化。<br />
+                            秒级部署服务容器，滚动升级不中断业务更新服务。<br />
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>安全运行服务</div>
+                        <div class="panel-inrto">
+
+                            容器异常自动恢复，服务内容器跨地域部署，可快速迁移。<br />
+                            有状态服务数据支持多种形式的持久化存储，保证用户数据安全。<br />
+                        </div>
+                    </div>
+                    <div>
+                        <div>快速运维服务</div>
+                        <div class="panel-inrto">
+                            丰富的监控数据，分析服务健康快速响应。<br />
+                            支持自定义监控告警，及时获取服务状态信息。<br />
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel">
+                    <div>
+                        <div class="panel-title">管理不同环境业务配置</div>
+                        <div class="panel-inrto">
+                            支持部署相同应用的不同环境，方便更新和回滚应用。<br />
+                            支持多版本，只支持新增版本，不支持修改版本。
+                        </div>
+                    </div>
+                    <div>
+                        <div>快捷便利</div>
+                        <div class="panel-inrto">
+                            支持将配置以文件形式导入容器，简单快捷。
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel">
+                    <div>
+                        <div class="panel-title">dockerhub 官方镜像管理</div>
+                        <div class="panel-inrto">
+                            定期同步 dockerhub 官方镜像。<br />
+                            提供 dockerhub 官方镜像加速拉取。
+                        </div>
+                    </div>
+                    <div>
+                        <div>私有镜像管理</div>
+                        <div class="panel-inrto">
+                            提供安全、可靠的私有镜像仓库。<br />
+                            内网快速实现镜像的上传下载。<br />
+                            全地域、外网获取镜像。<br />
+                            在保证集群内运行稳定的服务前提下，容器细粒度地划分宿主机资源，尽量多的跑容器，提高集群的资源利用率。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--screen5-->
+        <section class="screen-5">
+            <div class="title">应用场景</div>
+            <div class="c-tab-normal c-tab-responsive J-tabWrapper">
+                <ul>
+                    <li class="c-tab-simple actived"><a href="javascript:;"><span>微服务架构</span></a></li>
+                    <li class="c-tab-simple"><a href="javascript:;"><span>持续集成与交付</span></a></li>
+                    <li class="c-tab-simple"><a href="javascript:;"><span>弹性伸缩</span></a></li>
+                </ul>
+            </div>
+            <div class="c-tab-panel showFlex">
+                <div class="line-height26">
+                    微服务架构适用于构建复杂的应用，将您单体式应用从不同纬度拆分成多个微服务，每个微服务的内容使用一个 docker 镜像管
+                    理。在功能不变的情况，应用拆分成了多个可管理的服务，每个单体的服务容易理解、开发和维护。不同的微服务也可以由不同
+                    的团队来开发，开发团队可自由选择开发技术和程序语言等，每个服务又可独立部署、独立扩展。
+
+                    例如 Web 应用程序可以分割成一组更简单的外部服务及多组内部服务。
+                </div>
+                <img src="./img/wfwjg.png" alt="">
+            </div>
+            <div class="c-tab-panel">
+                <div class="line-height26">
+                    持续集成与持续交付提供的优秀的 DevOps
+                    环境，可极大提高软件的发布效率。持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试，便于确定新代码和原有代码能否正确地打包集成在一起。持续交付在持续集成的基础上，将集成的代码部署到预发布环境和现网环境上。
+                </div>
+                <img src="./img/zcjf.png" alt="">
+            </div>
+            <div class="c-tab-panel">
+                <div class="line-height26">
+                    数码容器服务提供集群和服务两个层级的弹性伸缩能力， 能够根据业务运行情况，监控容器的
+                    CPU、内存、带宽等指标进行自动扩缩服务，同时可以根据容器的部署情况，在容器不够资源分配，或者有过多剩余资源的情况下自动伸缩集群。
+                </div>
+                <img src="./img/txss.png" alt="">
+            </div>
+        </section>
+        <section class="screen-6">
+            <div class="title">开发者资源</div>
+            <div class="flex-warp">
+                <div class="card-item">
+                    <div>TKE控制台</div>
+                    <img src="./img/kzt.png" alt="">
+                </div>
+                <div class="card-item">
+                    <div>TKE文档</div>
+                    <img src="./img/tkewd.png" alt="">
+                </div>
+                <div class="card-item">
+                    <div>TKE API文档</div>
+                    <img src="./img/apiwd.png" alt="">
+                </div>
+                <div class="card-item">
+                    <div>云服务器</div>
+                    <img src="./img/yfwq.png" alt="">
+                </div>
+                <div class="card-item">
+                    <div>云硬盘</div>
+                    <img src="./img/yyp.png" alt="">
+                </div>
+                <div class="card-item">
+                    <div>负载均衡</div>
+                    <img src="./img/fzjh.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!--footer-->
+        <section class="footer">
+            <div class="footer-container">
+                <div class="footer-item">
+                    <div style="margin-bottom: 15px;">产品介绍</div>
+                    <a href="javascript:;">数据建模系统</a>
+                    <a href="javascript:;">数据集成系统</a>
+                    <a href="javascript:;">数据开发系统</a>
+                    <a href="javascript:;">API服务</a>
+                    <a href="javascript:;">API服务</a>
+                </div>
+                <div class="footer-item">
+                    <div style="margin-bottom: 15px; height: 20px;"></div>
+                    <a href="javascript:;">API服务</a>
+                    <a href="javascript:;">API服务</a>
+                    <a href="javascript:;">API服务</a>
+                    <a href="javascript:;">API服务</a>
+                    <a href="javascript:;">API服务</a>
+                </div>
+                <div class="footer-item">
+                    <div style="margin-bottom: 15px;height: 20px;"></div>
+                    <a href="javascript:;">API服务</a>
+                    <a href="javascript:;">API服务</a>
+                    <a href="javascript:;">API服务</a>
+                    <a href="javascript:;">API服务</a>
+                    <a href="javascript:;">API服务</a>
+                </div>
+                <div class="footer-item">
+                    <div style="margin-bottom: 15px;">帮助中心</div>
+                    <a href="javascript:;">使用文档</a>
+                    <a href="javascript:;">信息反馈</a>
+                    <a href="javascript:;">信息反馈</a>
+                    <a href="javascript:;">信息反馈</a>
+                    <a href="javascript:;">信息反馈</a>
+                </div>
+            </div>
+        </section>
+
+    <script type="text/javascript" src="js/index.js">
+
+    </script>
+</body>
+
+</html>
