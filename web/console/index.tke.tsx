@@ -295,7 +295,7 @@ Entry.register({
      * @url https://{{domain}}/tkestack/application
      */
     application: {
-      title: t('Helm 应用 - 数码容器云'),
+      title: t('应用管理 - 数码容器云'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Manager}>
           <ForbiddentDialog />
