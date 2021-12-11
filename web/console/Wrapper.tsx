@@ -171,7 +171,7 @@ const commonRouterConfig: RouterConfig[] = [
     subRouterConfig: [
       {
         url: '/tkestack/application/app',
-        title: 'Helm应用',
+        title: '应用管理',
         watchModule: ConsoleModuleEnum.Application
       },
       // {
@@ -258,7 +258,7 @@ const businessCommonRouterConfig: RouterConfig[] = [
     subRouterConfig: [
       {
         url: '/tkestack-project/app/app',
-        title: 'Helm应用',
+        title: '应用管理',
         watchModule: ConsoleModuleEnum.Application
       },
       // {
