@@ -124,7 +124,7 @@ Entry.register({
      * @url https://{{domain}}//tkestack-project/application
      */
     index: {
-      title: '应用管理 - TKEStack业务侧',
+      title: '应用管理 - 业务侧',
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
@@ -137,7 +137,7 @@ Entry.register({
      * @url https://{{domain}}//tkestack-project/application
      */
     application: {
-      title: '应用管理 - TKEStack业务侧',
+      title: '应用管理 - 业务侧',
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
@@ -150,7 +150,7 @@ Entry.register({
      * @url https://{{domain}}/tkestack-project/project
      */
     project: {
-      title: t('业务管理 - TKEStack业务侧'),
+      title: t('业务管理 - 业务侧'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
@@ -163,7 +163,7 @@ Entry.register({
      * @urlhttps://{{domain}}//tkestack-project/regitry
      */
     registry: {
-      title: t('组织资源 - TKEStack业务侧'),
+      title: t('组织资源 - 业务侧'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
@@ -176,7 +176,7 @@ Entry.register({
      * @url https://{{domain}}/tkestack/alarm
      */
     alarm: {
-      title: t('告警设置 - TKEStack业务侧'),
+      title: t('告警设置 - 业务侧'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
@@ -189,7 +189,7 @@ Entry.register({
      * @url https://{{domain}}/tkestack/notify
      */
     notify: {
-      title: t('通知设置 - TKEStack业务侧'),
+      title: t('通知设置 - 业务侧'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
@@ -202,7 +202,7 @@ Entry.register({
      * @url https://{{domain}}/tkestack/helm-application
      */
     app: {
-      title: t('Helm 应用 - TKEStack业务侧'),
+      title: t('Helm 应用 - 业务侧'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
@@ -215,7 +215,7 @@ Entry.register({
      * @url https://{{domain}}/tkestack/helm
      */
     helm: {
-      title: t('Helm2 应用 - TKEStack业务侧'),
+      title: t('Helm2 应用 - 业务侧'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
@@ -228,7 +228,7 @@ Entry.register({
      * @url https://{{domian}}/tkestack/log
      */
     log: {
-      title: t('日志采集 - TKEStack业务侧'),
+      title: t('日志采集 - 业务侧'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
@@ -241,7 +241,7 @@ Entry.register({
      * @url https://{{domain}}/tkestack/persistent-event
      */
     'persistent-event': {
-      title: t('事件持久化 - TKEStack业务侧'),
+      title: t('事件持久化 - 业务侧'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Business}>
           <ForbiddentDialog />
