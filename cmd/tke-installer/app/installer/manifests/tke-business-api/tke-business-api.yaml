@@ -56,6 +56,9 @@ spec:
               mountPath: /app/certs
             - name: tke-business-api-volume
               mountPath: /app/conf
+            - name: tke-provider-config-volume
+                mountPath: /app/provider/baremetal/conf/config.yaml
+                subPath: config.yaml
           ports:
             - containerPort: 9447
           readinessProbe:
@@ -86,6 +89,13 @@ spec:
         - name: tke-business-api-volume
           configMap:
             name: tke-business-api
+        - name: tke-provider-config-volume
+            configMap:
+              defaultMode: 420
+              name: tke-business-api
+              items:
+                - key: tke-provider-config.yaml
+                  path: config.yaml
 ---
 kind: ConfigMap
 apiVersion: v1
@@ -200,6 +210,12 @@ data:
           cluster: tke
           user: admin-cert
         name: tke
+
+  tke-provider-config.yaml: |
+    platformAPIClientConfig: conf/tke-platform-config.yaml
+    registry:
+      prefix: registry.kxdigit.com/library
+      ip: ""
 
 {{- if .EnableRegistry }}
   tke-registry-config.yaml: |
