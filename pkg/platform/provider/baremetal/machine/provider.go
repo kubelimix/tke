@@ -35,7 +35,7 @@ const (
 	name = "Baremetal"
 )
 
-func init() {
+func RegisterProvider() {
 	p, err := NewProvider()
 	if err != nil {
 		log.Errorf("init machine provider error: %s", err)
