@@ -47,7 +47,7 @@ function operationResult<T>(target: T[] | T, error?: any): OperationResult<T>[] 
 }
 
 /**
- * 业务查询
+ * 项目查询
  * @param query 地域查询的一些过滤条件
  */
 export async function fetchProjectList(query: QueryState<ProjectFilter>) {
@@ -171,7 +171,7 @@ export async function fetchProjectList(query: QueryState<ProjectFilter>) {
 }
 
 /**
- * 业务查询
+ * 项目查询
  * @param query 地域查询的一些过滤条件
  */
 export async function fetchProjectDetail(projectId?: string) {
@@ -203,7 +203,7 @@ function _reduceProjectLimit(projectResourceLimit: ProjectResourceLimit[]) {
 }
 
 /**
- * 业务编辑
+ * 项目编辑
  */
 export async function editProject(projects: ProjectEdition[]) {
   try {
@@ -275,7 +275,7 @@ export async function editProject(projects: ProjectEdition[]) {
 }
 
 /**
- * 业务删除
+ * 项目删除
  */
 export async function deleteProject(projects: Project[]) {
   try {
@@ -587,7 +587,7 @@ export async function fetchAdminstratorInfo() {
 }
 
 /**
- * 业务编辑
+ * 项目编辑
  */
 export async function modifyAdminstrator(projects: ProjectEdition[]) {
   try {
@@ -639,7 +639,7 @@ export async function modifyAdminstrator(projects: ProjectEdition[]) {
 }
 
 /**
- * 业务查询
+ * 项目查询
  * @param query 地域查询的一些过滤条件
  */
 export async function fetchProjectUserInfo(query: QueryState<ProjectFilter>) {
@@ -677,7 +677,7 @@ export async function fetchProjectUserInfo(query: QueryState<ProjectFilter>) {
   return projectUserMap;
 }
 /**
- * 添加已有业务为子业务
+ * 添加已有项目为子项目
  * @param query
  */
 export async function addExistMultiProject(projects: Project[], parentProjectName: string) {

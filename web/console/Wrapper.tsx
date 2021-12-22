@@ -36,7 +36,7 @@ const { LoadingTip } = StatusTip;
 
 const routerSea = seajs.require('router');
 
-/**平台管理员,业务成员,游客,未初始化 */
+/**平台管理员,项目成员,游客,未初始化 */
 enum UserType {
   admin = 'admin',
   member = 'member',
@@ -48,7 +48,7 @@ export enum PlatformTypeEnum {
   /** 平台 */
   Manager = 'manager',
 
-  /** 业务 */
+  /** 项目 */
   Business = 'business'
 }
 
@@ -89,7 +89,7 @@ const commonRouterConfig: RouterConfig[] = [
   },
   {
     url: '/tkestack/project',
-    title: '业务管理',
+    title: '项目管理',
     watchModule: ConsoleModuleEnum.Business
   },
   {
@@ -98,7 +98,7 @@ const commonRouterConfig: RouterConfig[] = [
     watchModule: ConsoleModuleEnum.PLATFORM
   },
   {
-    title: '组织资源',
+    title: '资源中心',
     watchModule: [ConsoleModuleEnum.Registry, ConsoleModuleEnum.Auth],
     subRouterConfig: [
       {
@@ -201,17 +201,17 @@ const commonRouterConfig: RouterConfig[] = [
 /** 基础的侧边栏导航栏配置 */
 const businessCommonRouterConfig: RouterConfig[] = [
   {
+    url: '/tkestack-project/project',
+    title: '项目管理',
+    watchModule: ConsoleModuleEnum.Business
+  },
+  {
     url: '/tkestack-project/application',
     title: '应用管理',
     watchModule: ConsoleModuleEnum.Business
   },
   {
-    url: '/tkestack-project/project',
-    title: '业务管理',
-    watchModule: ConsoleModuleEnum.Business
-  },
-  {
-    title: '组织资源',
+    title: '资源中心',
     watchModule: [ConsoleModuleEnum.Registry, ConsoleModuleEnum.Auth],
     subRouterConfig: [
       {
@@ -276,7 +276,7 @@ const businessCommonRouterConfig: RouterConfig[] = [
 ];
 
 interface ConsoleWrapperProps {
-  /** 平台侧业务侧 */
+  /** 平台侧项目侧 */
   platformType: PlatformTypeEnum;
 
   /** 是否需要侧边导航栏 */
@@ -310,10 +310,10 @@ interface ConsoleWrapperState {
   /** 控制台的api映射 */
   consoleApiMap: ConsoleModuleMapProps;
 
-  /** 该用户是否为平台管理员,业务成员,游客 */
+  /** 该用户是否为平台管理员,项目成员,游客 */
   userType: UserType;
 
-  /**该用户负责的业务 */
+  /**该用户负责的项目 */
   projects: Project[];
 
   /** 是否展示user的下拉框 */
@@ -359,7 +359,7 @@ export class Wrapper extends React.Component<ConsoleWrapperProps, ConsoleWrapper
     this.state.userType === UserType.init && (await this.getUserProjectInfo());
   }
 
-  //获取用户信息包括用户业务信息
+  //获取用户信息包括用户项目信息
   async getUserInfo() {
     const infoResourceInfo: ResourceInfo = resourceConfig()['info'];
     const url = reduceK8sRestfulPath({ resourceInfo: infoResourceInfo });
@@ -446,7 +446,7 @@ export class Wrapper extends React.Component<ConsoleWrapperProps, ConsoleWrapper
     } catch (error) {}
   }
 
-  //获取用户信息包括用户业务信息
+  //获取用户信息包括用户项目信息
   async getUserProjectInfo() {
     const userResourceInfo: ResourceInfo = resourceConfig().portal;
     const url = reduceK8sRestfulPath({ resourceInfo: userResourceInfo });
@@ -619,10 +619,10 @@ export class Wrapper extends React.Component<ConsoleWrapperProps, ConsoleWrapper
         <div className="qc-aside-area">
           <div className="qc-aside-area-main">
             <h2 className="qc-aside-headline">
-              <Text verticalAlign="middle">{platformType === PlatformTypeEnum.Manager ? '平台管理' : '业务管理'}</Text>
+              <Text verticalAlign="middle">{platformType === PlatformTypeEnum.Manager ? '平台管理' : '项目管理'}</Text>
               {userType === UserType.admin && projects.length ? (
                 <Bubble
-                  content={platformType === PlatformTypeEnum.Manager ? '切换至业务管理控制台' : '切换至平台管理控制台'}
+                  content={platformType === PlatformTypeEnum.Manager ? '切换至项目管理控制台' : '切换至平台管理控制台'}
                   placement="right"
                 >
                   <Icon
@@ -717,7 +717,7 @@ export class Wrapper extends React.Component<ConsoleWrapperProps, ConsoleWrapper
                           href="javascript:;"
                           onClick={e => {
                             if (!isSelected) {
-                              // 这里需要区分是否为别的业务，如果是别的业务，是进行业务的跳转
+                              // 这里需要区分是否为别的项目，如果是别的项目，是进行项目的跳转
                               if (this.props.platformType === PlatformTypeEnum.Manager) {
                                 this.onNav(routerIns.url);
                               } else {

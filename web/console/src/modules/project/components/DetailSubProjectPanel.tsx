@@ -161,7 +161,7 @@ export class DetailSubProjectPanel extends React.Component<RootProps, any> {
     return (
       <TablePanel
         columns={columns}
-        emptyTips={<div className="text-center">{t('子业务列表为空')}</div>}
+        emptyTips={<div className="text-center">{t('子项目列表为空')}</div>}
         model={detailProject}
         action={actions.detail.project}
       />
@@ -247,12 +247,12 @@ export class DetailSubProjectPanel extends React.Component<RootProps, any> {
     return (
       <Modal
         visible={deleteParentProject.operationState !== OperationState.Pending}
-        caption={t('解除业务关联')}
+        caption={t('解除项目关联')}
         onClose={() => cancel()}
       >
         <Modal.Body>
           <FormPanel.Text>
-            {t('确定要删除业务{{projectId}}与父业务的关联么？', {
+            {t('确定要删除项目{{projectId}}与父项目的关联么？', {
               projectId: detailProject.selection ? detailProject.selection.metadata.name : ''
             })}
           </FormPanel.Text>

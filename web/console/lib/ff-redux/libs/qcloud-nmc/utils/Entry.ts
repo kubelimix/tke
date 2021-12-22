@@ -42,12 +42,12 @@ export namespace Entry {
 
   export interface Registration {
     /**
-     * 业务 Key，对应唯一业务，业务入口的 URL 通过该 Key 推导
+     * 项目 Key，对应唯一项目，项目入口的 URL 通过该 Key 推导
      * */
     businessKey: string;
 
     /**
-     * 路由配置，index 必配。其他路由名称对应业务二级路由，如：
+     * 路由配置，index 必配。其他路由名称对应项目二级路由，如：
      *
      * {
      *     index: {...},  // 对应 `https://console.qcloud.com/{businessKey}`
@@ -64,7 +64,7 @@ export namespace Entry {
       index?: ModuleConfig;
 
       /**
-       * 其他业务模块路由定义
+       * 其他项目模块路由定义
        * */
       [moduleKey: string]: ModuleConfig;
     };

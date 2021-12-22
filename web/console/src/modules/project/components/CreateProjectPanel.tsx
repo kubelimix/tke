@@ -62,7 +62,7 @@ export class CreateProjectPanel extends React.Component<
     this.getUserInfo();
   }
 
-  //获取用户信息包括用户业务信息
+  //获取用户信息包括用户项目信息
   async getUserInfo() {
     let { actions } = this.props;
     let infoResourceInfo: ResourceInfo = resourceConfig()['info'];
@@ -116,7 +116,7 @@ export class CreateProjectPanel extends React.Component<
     });
 
     projectListOpions.unshift({
-      text: '无上级业务',
+      text: '无上级项目',
       value: ''
     });
 
@@ -140,9 +140,9 @@ export class CreateProjectPanel extends React.Component<
     return (
       <FormPanel>
         <FormPanel.Item
-          label={t('业务名称')}
+          label={t('项目名称')}
           errorTipsStyle="Icon"
-          message={t('业务名称不能超过63个字符')}
+          message={t('项目名称不能超过63个字符')}
           validator={projectEdition.v_displayName}
           input={{
             value: projectEdition.displayName,
@@ -152,7 +152,7 @@ export class CreateProjectPanel extends React.Component<
             }
           }}
         />
-        <FormPanel.Item label={t('业务管理员')}>
+        <FormPanel.Item label={t('项目管理员')}>
           <div style={{ width: 600 }}>
             <EditProjectManagerPanel {...this.props} />
           </div>
@@ -218,9 +218,9 @@ export class CreateProjectPanel extends React.Component<
           </Button>
         </FormPanel.Item>
 
-        <FormPanel.Item label={t('上级业务')}>
+        <FormPanel.Item label={t('上级项目')}>
           <FormPanel.Select
-            label={t('上级业务')}
+            label={t('上级项目')}
             options={projectListOpions}
             value={projectEdition.parentProject}
             disabled={platformType === PlatformTypeEnum.Business}

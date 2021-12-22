@@ -170,13 +170,13 @@ export const resourceConfig = (k8sVersion: string = '1.16'): ResourceConfigKey =
     lbcf_br: getResourceConfig(lbcf_br, finalK8sVersion),
     lbcf_driver: getResourceConfig(lbcf_driver, finalK8sVersion),
 
-    /** =============== 这里是业务相关的 =============== */
+    /** =============== 这里是项目相关的 =============== */
     projects: getResourceConfig(projects, finalK8sVersion),
     members: getResourceConfig(members, finalK8sVersion),
     portal: getResourceConfig(portal, finalK8sVersion),
     platforms: getResourceConfig(platforms, finalK8sVersion),
     namespaces: getResourceConfig(namespaces, finalK8sVersion),
-    /** =============== 这里是业务相关的 =============== */
+    /** =============== 这里是项目相关的 =============== */
 
     /** =============== 这里是addon相关的 =============== */
     addon: getResourceConfig(addon, finalK8sVersion),

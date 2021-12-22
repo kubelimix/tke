@@ -47,7 +47,7 @@ export class EditProjectManagerPanel extends React.Component<EditProjectManagerP
       },
 
       /** 选择器标题 */
-      title: t(`当前业务可分配以下责任人`),
+      title: t(`当前项目可分配以下责任人`),
 
       columns: [
         {

@@ -142,7 +142,7 @@ export class ProjectTablePanel extends React.Component<RootProps, any> {
       },
       {
         key: 'parentProject',
-        header: t('上级业务'),
+        header: t('上级项目'),
         render: x => (
           <Text parent="div" overflow>
             {x.spec.parentProjectName ? x.spec.parentProjectName : '无'}
@@ -216,7 +216,7 @@ export class ProjectTablePanel extends React.Component<RootProps, any> {
     return (
       <GridTable
         columns={columns}
-        emptyTips={<div className="text-center">{t('业务列表为空')}</div>}
+        emptyTips={<div className="text-center">{t('项目列表为空')}</div>}
         listModel={{
           list: project.list,
           query: project.query
@@ -288,27 +288,27 @@ export class ProjectTablePanel extends React.Component<RootProps, any> {
     const { actions, deleteProject } = this.props;
     return (
       <WorkflowDialog
-        caption={t('删除业务')}
+        caption={t('删除项目')}
         workflow={deleteProject}
         action={actions.project.deleteProject}
         targets={deleteProject.targets}
         postAction={() => {}}
         params={{}}
         confirmMode={{
-          label: t('业务Id'),
+          label: t('项目Id'),
           value: deleteProject.targets ? deleteProject.targets[0].metadata.name : ''
         }}
       >
         <DialogBodyLayout>
           <p className="til">
             <strong className="tip-top">
-              {t('确定要删除业务{{displayName}}({{name}})么？', {
+              {t('确定要删除项目{{displayName}}({{name}})么？', {
                 displayName: deleteProject.targets ? deleteProject.targets[0].spec.displayName : '',
                 name: deleteProject.targets ? deleteProject.targets[0].id : ''
               })}
             </strong>
           </p>
-          <p className="text-danger">{t('删除业务将删除该业务下所有资源，该操作不可逆，请谨慎操作。')}</p>
+          <p className="text-danger">{t('删除项目将删除该项目下所有资源，该操作不可逆，请谨慎操作。')}</p>
         </DialogBodyLayout>
       </WorkflowDialog>
     );

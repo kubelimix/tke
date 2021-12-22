@@ -52,7 +52,7 @@ export interface User extends Identifiable {
 }
 
 export interface UserFilter {
-  /** 业务Id */
+  /** 项目Id */
   projectId?: string;
 
   /** 用户名(唯一) */

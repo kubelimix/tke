@@ -15,7 +15,7 @@
  * WARRANTIES OF ANY KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations under the License.
  */
-/** 业务的相关操作 */
+/** 项目的相关操作 */
 export const CreateProject = 'CreateProject';
 export const EditProjectName = 'EditProjectName';
 export const EditProjectManager = 'EditProjectManager';

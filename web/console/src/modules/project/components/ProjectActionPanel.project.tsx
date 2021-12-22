@@ -59,7 +59,7 @@ export class ProjectActionPanel extends React.Component<RootProps, {}> {
               value={project.query.keyword || ''}
               onChange={actions.project.changeKeyword}
               onSearch={actions.project.performSearch}
-              placeholder={t('请输入业务名称')}
+              placeholder={t('请输入项目名称')}
             />
           }
         />

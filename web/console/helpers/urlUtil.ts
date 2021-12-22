@@ -92,7 +92,7 @@ interface K8sRestfulPathOptions {
   /** 命名空间，具体的ns */
   namespace?: string;
 
-  /** 业务视图是否切分namespace */
+  /** 项目视图是否切分namespace */
   isSpecialNamespace?: boolean;
 
   /** 不在路径最后的变量，比如projectId*/
@@ -178,7 +178,7 @@ export function cutNsStartClusterId({ namespace, clusterId }) {
 export function reduceNs(namesapce) {
   let newNs = namesapce;
   /// #if project
-  //业务侧ns eg: cls-xxx-ns 需要去除前缀
+  //项目侧ns eg: cls-xxx-ns 需要去除前缀
   if (newNs) {
     newNs = newNs.startsWith('global') ? newNs.split('-').splice(1).join('-') : newNs.split('-').splice(2).join('-');
   }
@@ -189,7 +189,7 @@ export function reduceNs(namesapce) {
 export function reverseReduceNs(clusterId: string, namespace: string) {
   let newNs = namespace;
   /// #if project
-  //业务侧ns eg: cls-xxx-ns 需要去除前缀
+  //项目侧ns eg: cls-xxx-ns 需要去除前缀
   if (newNs) {
     newNs = `${clusterId}-${newNs}`;
   }

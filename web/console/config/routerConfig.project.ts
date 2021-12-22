@@ -43,51 +43,51 @@ export const subRouterConfig = () => {
       path: 'resource', // 用于判断哪个二级菜单栏需要展开
       sub: [
         {
-          name: 'Deployment',
+          name: '部署',
           path: 'deployment'
         },
         {
-          name: 'StatefulSet',
+          name: '有状态副本集',
           path: 'statefulset'
         },
         {
-          name: 'DaemonSet',
+          name: '守护进程集',
           path: 'daemonset'
         },
         {
-          name: 'Job',
+          name: '任务',
           path: 'job'
         },
         {
-          name: 'CronJob',
+          name: '定时任务',
           path: 'cronjob'
         }
       ]
     },
     {
-      name: t('自动伸缩'),
+      name: t('伸缩策略'),
       path: 'scale',
       sub: [
         {
-          name: 'HPA',
+          name: '自动伸缩',
           path: 'hpa'
         },
         {
-          name: 'CronHPA',
+          name: '定时伸缩',
           path: 'cronhpa'
         }
       ]
     },
     {
-      name: t('服务'),
+      name: t('服务管理'),
       path: 'service', // 用于判断哪个二级菜单栏需要展开
       sub: [
         {
-          name: 'Service',
+          name: '应用服务',
           path: 'svc'
         },
         {
-          name: 'Ingress',
+          name: '服务路由',
           path: 'ingress'
         }
       ]
@@ -97,11 +97,11 @@ export const subRouterConfig = () => {
       path: 'config',
       sub: [
         {
-          name: 'ConfigMap',
+          name: '普通配置',
           path: 'configmap'
         },
         {
-          name: 'Secret',
+          name: '密钥配置',
           path: 'secret'
         }
       ]
@@ -111,11 +111,11 @@ export const subRouterConfig = () => {
       path: 'storage',
       sub: [
         {
-          name: 'PersistentVolumeClaim',
+          name: '存储卷声明',
           path: 'pvc'
         },
         {
-          name: 'StorageClass',
+          name: '存储类型',
           path: 'sc'
         }
       ]
@@ -123,7 +123,7 @@ export const subRouterConfig = () => {
     {
       name: t('日志'),
       path: 'k8sLog',
-      basicUrl: 'log',
+      basicUrl: 'log'
     },
     {
       name: t('事件'),

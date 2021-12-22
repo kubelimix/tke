@@ -37,9 +37,9 @@ export const UserCreate = props => {
   const userList = manager.list.data.records || [];
   let strategyList = policyPlainList.list.data.records || [];
   strategyList = strategyList.filter(
-    item => ['业务管理员', '业务成员', '业务只读'].includes(item.displayName) === false
+    item => ['项目管理员', '项目成员', '项目只读'].includes(item.displayName) === false
   );
-  const tenantID = strategyList.filter(item => item.displayName === '业务管理员').tenantID;
+  const tenantID = strategyList.filter(item => item.displayName === '项目管理员').tenantID;
 
   const [inputValue, setInputValue] = useState('');
   const [targetKeys, setTargetKeys] = useState([]);
@@ -166,23 +166,23 @@ export const UserCreate = props => {
               />
             </Form.Item>
             <Form.Item
-              label={t('业务角色')}
+              label={t('项目角色')}
               required
               status={getStatus(role.meta, validating)}
               message={getStatus(role.meta, validating) === 'error' ? role.meta.error : ''}
             >
               <Radio.Group {...role.input} layout="column">
                 <Radio name={tenantID ? `pol-${tenantID}-project-owner` : 'pol-default-project-owner'}>
-                  <Text>业务管理员</Text>
-                  <Text parent="div">预设业务角色，允许管理业务自身和业务下的所有功能和资源</Text>
+                  <Text>项目管理员</Text>
+                  <Text parent="div">预设项目角色，允许管理项目自身和项目下的所有功能和资源</Text>
                 </Radio>
                 <Radio name={tenantID ? `pol-${tenantID}-project-member` : 'pol-default-project-member'}>
-                  <Text>业务成员</Text>
-                  <Text parent="div">预设业务角色，允许访问和管理所在业务下的所有功能和资源</Text>
+                  <Text>项目成员</Text>
+                  <Text parent="div">预设项目角色，允许访问和管理所在项目下的所有功能和资源</Text>
                 </Radio>
                 <Radio name={tenantID ? `pol-${tenantID}-project-viewer` : 'pol-default-project-viewer'}>
                   <Text>只读成员</Text>
-                  <Text parent="div">预设业务角色，仅能够查看业务下资源</Text>
+                  <Text parent="div">预设项目角色，仅能够查看项目下资源</Text>
                 </Radio>
                 <Radio name="custom">
                   <Text>自定义</Text>

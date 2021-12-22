@@ -37,7 +37,7 @@ export enum PlatformTypeEnum {
   /** 平台 */
   Manager = 'manager',
 
-  /** 业务 */
+  /** 项目 */
   Business = 'business'
 }
 
@@ -101,7 +101,7 @@ insertCSS(
 
 /** ======= hack外层，使其能够接受参数，触发state变化，进行侧边栏的更新 ======== */
 interface TempWrapperProps {
-  /** 当前业务的businessKey */
+  /** 当前项目的businessKey */
   businessKey: string;
 }
 
@@ -212,7 +212,7 @@ Entry.register({
      * @url https://{{domain}}/tkestack/project
      */
     project: {
-      title: t('业务管理 - 数码容器云'),
+      title: t('项目管理 - 数码容器云'),
       container: (
         <Wrapper platformType={PlatformTypeEnum.Manager}>
           <ForbiddentDialog />

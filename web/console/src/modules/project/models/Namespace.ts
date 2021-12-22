@@ -100,14 +100,14 @@ export interface NamespaceEdition extends Identifiable {
 }
 
 export interface NamespaceOperator {
-  /**业务 */
+  /**项目 */
   projectId?: string;
   /**迁移使用 */
   desProjectId?: string;
 }
 
 export interface NamespaceFilter {
-  /**业务Id */
+  /**项目Id */
   projectId?: string;
 
   np?: string;

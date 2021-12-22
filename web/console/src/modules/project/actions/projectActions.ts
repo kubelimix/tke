@@ -95,7 +95,7 @@ const restActions = {
       );
     };
   },
-  /** 创建业务 */
+  /** 创建项目 */
   createProject: generateWorkflowActionCreator<ProjectEdition, void>({
     actionType: ActionType.CreateProject,
     workflowStateLocator: (state: RootState) => state.createProject,
@@ -113,7 +113,7 @@ const restActions = {
     }
   }),
 
-  /** 编辑业务名称 */
+  /** 编辑项目名称 */
   editProjectName: generateWorkflowActionCreator<ProjectEdition, void>({
     actionType: ActionType.EditProjectName,
     workflowStateLocator: (state: RootState) => state.editProjectName,
@@ -135,7 +135,7 @@ const restActions = {
     }
   }),
 
-  /** 编辑业务负责人 */
+  /** 编辑项目负责人 */
   editProjectManager: generateWorkflowActionCreator<ProjectEdition, void>({
     actionType: ActionType.EditProjectManager,
     workflowStateLocator: (state: RootState) => state.editProjectManager,
@@ -157,7 +157,7 @@ const restActions = {
     }
   }),
 
-  /** 编辑业务描述 */
+  /** 编辑项目描述 */
   editProjecResourceLimit: generateWorkflowActionCreator<ProjectEdition, void>({
     actionType: ActionType.EditProjecResourceLimit,
     workflowStateLocator: (state: RootState) => state.editProjecResourceLimit,
@@ -174,7 +174,7 @@ const restActions = {
     }
   }),
 
-  /** 编辑业务描述 */
+  /** 编辑项目描述 */
   addExistMultiProject: generateWorkflowActionCreator<Project, string>({
     actionType: ActionType.AddExistMultiProject,
     workflowStateLocator: (state: RootState) => state.addExistMultiProject,
@@ -192,7 +192,7 @@ const restActions = {
     }
   }),
 
-  /** 编辑业务描述 */
+  /** 编辑项目描述 */
   deleteParentProject: generateWorkflowActionCreator<Project, string>({
     actionType: ActionType.DeleteParentProject,
     workflowStateLocator: (state: RootState) => state.deleteParentProject,
@@ -210,7 +210,7 @@ const restActions = {
     }
   }),
 
-  /** 删除业务 */
+  /** 删除项目 */
   deleteProject: generateWorkflowActionCreator<Project, string>({
     actionType: ActionType.DeleteProject,
     workflowStateLocator: (state: RootState) => state.deleteProject,
@@ -226,7 +226,7 @@ const restActions = {
     }
   }),
 
-  /**拉取业务详情 */
+  /**拉取项目详情 */
   fetchDetail: (projectId?: string) => {
     return async dispatch => {
       let project = await WebAPI.fetchProjectDetail(projectId);
@@ -265,10 +265,10 @@ const restActions = {
     // 验证内存限制
     if (name === '') {
       status = 2;
-      message = t('业务名称不能为空');
+      message = t('项目名称不能为空');
     } else if (name.length > 63) {
       status = 2;
-      message = t('业务名称长度不能超过63个字符');
+      message = t('项目名称长度不能超过63个字符');
     } else {
       status = 1;
       message = '';

@@ -35,7 +35,7 @@ export function RoleModifyDialog(props) {
   const { policyPlainList, route } = state;
   let strategyList = policyPlainList.list.data.records || [];
   strategyList = strategyList.filter(
-    item => ['业务管理员', '业务成员', '业务只读'].includes(item.displayName) === false
+    item => ['项目管理员', '项目成员', '项目只读'].includes(item.displayName) === false
   );
   const { isShowing, toggle, user } = props;
   console.log('PrivateEditorDialog props user:', user);
@@ -67,7 +67,7 @@ export function RoleModifyDialog(props) {
     initialValuesEqual: () => true,
     initialValues: { role: '' },
     validate: ({ role }) => ({
-      role: !role ? t('请选择业务角色') : undefined
+      role: !role ? t('请选择项目角色') : undefined
     })
   });
   const role = useField('role', form);
@@ -113,7 +113,7 @@ export function RoleModifyDialog(props) {
     <Modal
       visible={isShowing}
       size="l"
-      caption={t('选择业务角色')}
+      caption={t('选择项目角色')}
       onClose={() => {
         toggle();
         setTimeout(form.reset);
@@ -129,16 +129,16 @@ export function RoleModifyDialog(props) {
             >
               <Radio.Group {...role.input} layout="column">
                 <Radio name={tenantID ? `pol-${tenantID}-project-owner` : 'pol-default-project-owner'}>
-                  <Text>业务管理员</Text>
-                  <Text parent="div">预设业务角色，允许管理业务自身和业务下的所有功能和资源</Text>
+                  <Text>项目管理员</Text>
+                  <Text parent="div">预设项目角色，允许管理项目自身和项目下的所有功能和资源</Text>
                 </Radio>
                 <Radio name={tenantID ? `pol-${tenantID}-project-member` : 'pol-default-project-member'}>
-                  <Text>业务成员</Text>
-                  <Text parent="div">预设业务角色，允许访问和管理所在业务下的所有功能和资源</Text>
+                  <Text>项目成员</Text>
+                  <Text parent="div">预设项目角色，允许访问和管理所在项目下的所有功能和资源</Text>
                 </Radio>
                 <Radio name={tenantID ? `pol-${tenantID}-project-viewer` : 'pol-default-project-viewer'}>
                   <Text>只读成员</Text>
-                  <Text parent="div">预设业务角色，仅能够查看业务下资源</Text>
+                  <Text parent="div">预设项目角色，仅能够查看项目下资源</Text>
                 </Radio>
                 <Radio name="custom">
                   <Text>自定义</Text>

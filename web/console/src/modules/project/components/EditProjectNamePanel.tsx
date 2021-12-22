@@ -27,14 +27,14 @@ export class EditProjectNamePanel extends React.Component<RootProps, {}> {
     return (
       <FormPanel isNeedCard={false}>
         <FormPanel.Item
-          label={t('业务名称')}
+          label={t('项目名称')}
           validator={projectEdition.v_displayName}
           errorTipsStyle="Icon"
-          message={t('业务名称不能超过63个字符')}
+          message={t('项目名称不能超过63个字符')}
           input={{
             value: projectEdition.displayName,
             onChange: actions.project.inputProjectName,
-            placeholder: '请输入业务名称',
+            placeholder: '请输入项目名称',
             onBlur: e => {
               actions.project.validateDisplayName(e.target.value);
             }

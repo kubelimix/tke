@@ -43,7 +43,7 @@ export class SelectExistProjectDialog extends React.Component<RootProps, {}> {
     const selectorProps: FormPanelTransferTableTableProps<Project> = {
       tagSearch: {
         minWidth: 300,
-        attributes: [{ type: 'input', key: 'projectId', name: '业务名称' }]
+        attributes: [{ type: 'input', key: 'projectId', name: '项目名称' }]
       },
       /** 要供选择的数据 */
       model: project,
@@ -61,7 +61,7 @@ export class SelectExistProjectDialog extends React.Component<RootProps, {}> {
       },
 
       /** 选择器标题 */
-      title: t('当前有以下业务'),
+      title: t('当前有以下项目'),
 
       columns: [
         {
@@ -108,7 +108,7 @@ export class SelectExistProjectDialog extends React.Component<RootProps, {}> {
       <Modal
         size={700}
         visible={addExistMultiProject.operationState !== OperationState.Pending}
-        caption={t('添加已有业务')}
+        caption={t('添加已有项目')}
         onClose={() => cancel()}
       >
         <FormPanelTransferTable<Project> {...selectorProps} />

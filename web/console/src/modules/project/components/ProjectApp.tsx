@@ -55,10 +55,10 @@ export interface RootProps extends RootState {
   actions?: typeof allActions;
 }
 
-const mapDispatchToProps = (dispatch) =>
+const mapDispatchToProps = dispatch =>
   Object.assign({}, bindActionCreators({ actions: allActions }, dispatch), { dispatch });
 
-@connect((state) => state, mapDispatchToProps)
+@connect(state => state, mapDispatchToProps)
 @((router.serve as any)())
 class ProjectApp extends React.Component<RootProps, {}> {
   constructor(props, context) {
@@ -79,7 +79,7 @@ class ProjectApp extends React.Component<RootProps, {}> {
       return (
         <ContentView>
           <ContentView.Header>
-            <ProjectHeadPanel title={t('业务管理')} />
+            <ProjectHeadPanel title={t('项目管理')} />
           </ContentView.Header>
           <ContentView.Body>
             <ProjectActionPanel />
@@ -93,7 +93,7 @@ class ProjectApp extends React.Component<RootProps, {}> {
       return (
         <ContentView>
           <ContentView.Header>
-            <ProjectHeadPanel isNeedBack={true} title={t('新建业务')} />
+            <ProjectHeadPanel isNeedBack={true} title={t('新建项目')} />
           </ContentView.Header>
           <ContentView.Body>
             <CreateProjectPanel />

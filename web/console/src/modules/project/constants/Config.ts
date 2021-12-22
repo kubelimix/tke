@@ -212,6 +212,6 @@ export enum PlatformTypeEnum {
   /** 平台 */
   Manager = 'manager',
 
-  /** 业务 */
+  /** 项目 */
   Business = 'business'
 }

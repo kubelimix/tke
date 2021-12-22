@@ -104,10 +104,10 @@ export interface ProjectResourceLimit extends Identifiable {
 }
 
 export interface ProjectFilter {
-  /** 业务id */
+  /** 项目id */
   ProjectId?: string;
 
-  /**业务名称 */
+  /**项目名称 */
   displayName?: string;
 
   parentProject?: string;

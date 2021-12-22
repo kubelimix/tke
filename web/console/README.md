@@ -17,7 +17,7 @@ module.exports = {
 ## 启动服务
 
 - 平台管理为`npm run start-tke`;
-- 业务管理为`npm run start-project`
+- 项目管理为`npm run start-project`
 
 ## 快速替换运服务器端的静态文件
 

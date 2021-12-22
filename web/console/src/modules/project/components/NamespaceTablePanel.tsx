@@ -151,7 +151,7 @@ export class NamespaceTablePanel extends React.Component<RootProps, {}> {
     return (
       <TablePanel
         columns={columns}
-        emptyTips={<div className="text-center">{t('您选择的该业务的命名空间为空')}</div>}
+        emptyTips={<div className="text-center">{t('您选择的该项目的命名空间为空')}</div>}
         model={namespace}
         action={actions.namespace}
         getOperations={x => this._renderOperationCell(x)}
@@ -162,15 +162,8 @@ export class NamespaceTablePanel extends React.Component<RootProps, {}> {
   }
 
   private _renderOperationCell(namespace: Namespace) {
-    const {
-      actions,
-      route,
-      deleteNamespace,
-      namespaceEdition,
-      platformType,
-      projectDetail,
-      userManagedProjects
-    } = this.props;
+    const { actions, route, deleteNamespace, namespaceEdition, platformType, projectDetail, userManagedProjects } =
+      this.props;
     const urlParams = router.resolve(route);
     let enableOp =
       platformType === PlatformTypeEnum.Manager ||
@@ -410,7 +403,7 @@ export class NamespaceTablePanel extends React.Component<RootProps, {}> {
             <p style={{ marginBottom: '5px' }}>
               3. 可执行 kubectl get pod -n {np}
               测试是否可正常访问您的命名空间下的资源。如果无法连接请查看是否已经开启公网访问或内网访问入口，并确保访问客户端在指定的网络环境内。
-              如果返回 (Forbidden) 错误，请确保用户具有所在业务相应的权限。
+              如果返回 (Forbidden) 错误，请确保用户具有所在项目相应的权限。
             </p>
           </div>
         </Modal.Body>
@@ -447,13 +440,13 @@ function MigarteamespaceDialog(props: RootProps) {
     >
       <Modal.Body>
         <FormPanel isNeedCard={false}>
-          <FormPanel.Item label={t('当前业务')}>
+          <FormPanel.Item label={t('当前项目')}>
             <FormPanel.Text>
               {projectDetail ? `${projectDetail.metadata.name}(${projectDetail.spec.displayName})` : null}
             </FormPanel.Text>
           </FormPanel.Item>
           <FormPanel.Item
-            label={'目标业务'}
+            label={'目标项目'}
             validator={v_projectSelection}
             select={{
               value: projectSelection,
@@ -475,12 +468,12 @@ function MigarteamespaceDialog(props: RootProps) {
             if (projectSelection === '') {
               setVProjectSelection({
                 status: 2,
-                message: t('目标业务不能为空')
+                message: t('目标项目不能为空')
               });
             } else if (projectDetail && projectSelection === projectDetail.metadata.name) {
               setVProjectSelection({
                 status: 2,
-                message: t('目标业务不能和当前业务一致')
+                message: t('目标项目不能和当前项目一致')
               });
             } else {
               setVProjectSelection({

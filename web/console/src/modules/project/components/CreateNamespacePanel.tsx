@@ -105,7 +105,7 @@ export class CreateNamespacePanel extends React.Component<RootProps, {}> {
             }
           }}
         />
-        <FormPanel.Item text label={t('业务')}>
+        <FormPanel.Item text label={t('项目')}>
           {projectDetail ? (
             <React.Fragment>
               <FormPanel.InlineText>

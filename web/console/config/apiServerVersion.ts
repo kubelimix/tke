@@ -35,7 +35,7 @@ export const apiServerVersion = {
 };
 
 /**
- * 业务的Server版本
+ * 项目的Server版本
  * 根据tke的版本进行变化
  */
 export const businessServerVersion = {

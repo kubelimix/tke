@@ -101,13 +101,13 @@ export interface ApiVersion {
   logout?: ResourceApiInfo;
   /** ============= 以上是 用户相关的配置信息 的相关配置 ============== */
 
-  /** ============= 以上是 业务配置信息 的相关配置 ============== */
+  /** ============= 以上是 项目配置信息 的相关配置 ============== */
   projects?: ResourceApiInfo;
   members?: ResourceApiInfo;
   platforms?: ResourceApiInfo;
   portal?: ResourceApiInfo;
   namespaces?: ResourceApiInfo;
-  /** ============= 以上是 业务配置信息 的相关配置 ============== */
+  /** ============= 以上是 项目配置信息 的相关配置 ============== */
 
   /** 告警配置 */
   prometheus?: ResourceApiInfo;
@@ -692,7 +692,7 @@ const k8sConsoleApiVersion: ApiVersion = {
   }
 };
 
-/** 业务相关的配置信息 */
+/** 项目相关的配置信息 */
 const k8sProjectApiVersion: ApiVersion = {
   projects: {
     group: businessServerVersion.group,

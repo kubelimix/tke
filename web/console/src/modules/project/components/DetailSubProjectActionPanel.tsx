@@ -71,7 +71,7 @@ export class DetailSubProjectActionPanel extends React.Component<RootProps, {}> 
             router.navigate({ sub: 'create' });
           }}
         >
-          {t('新建子业务')}
+          {t('新建子项目')}
         </Button>
       );
     }
@@ -83,7 +83,7 @@ export class DetailSubProjectActionPanel extends React.Component<RootProps, {}> 
             actions.project.addExistMultiProject.start([]);
           }}
         >
-          {t('导入子业务')}
+          {t('导入子项目')}
         </Button>
       );
     }
@@ -97,7 +97,7 @@ export class DetailSubProjectActionPanel extends React.Component<RootProps, {}> 
               value={project.query.keyword || ''}
               onChange={actions.detail.project.changeKeyword}
               onSearch={actions.detail.project.performSearch}
-              placeholder={t('请输入业务名称')}
+              placeholder={t('请输入项目名称')}
             />
           }
         />

@@ -20,7 +20,7 @@ export enum ConsoleModuleEnum {
   /** tke-apiserver 版本 */
   PLATFORM = 'platform',
 
-  /** 业务的版本详情 */
+  /** 项目的版本详情 */
   Business = 'business',
 
   /** 通知模块 */

@@ -47,7 +47,7 @@ export class ProjectDetailPanel extends React.Component<RootProps, {}> {
     return projectDetail ? (
       <FormPanel title={t('基本信息')}>
         <FormPanel.Item
-          label={t('业务名称')}
+          label={t('项目名称')}
           text
           textProps={{
             onEdit: () => {

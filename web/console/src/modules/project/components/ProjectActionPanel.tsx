@@ -64,7 +64,7 @@ export class ProjectActionPanel extends React.Component<RootProps, {}> {
                   router.navigate({ sub: 'create' });
                 }}
               >
-                {t('新建业务')}
+                {t('新建项目')}
               </Button>
               {/* <Button
                 type="primary"
@@ -82,7 +82,7 @@ export class ProjectActionPanel extends React.Component<RootProps, {}> {
               value={project.query.keyword || ''}
               onChange={actions.project.changeKeyword}
               onSearch={actions.project.performSearch}
-              placeholder={t('请输入业务名称')}
+              placeholder={t('请输入项目名称')}
             />
           }
         />

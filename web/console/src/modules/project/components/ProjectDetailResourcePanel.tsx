@@ -147,7 +147,7 @@ export class ProjectDetailResourcePanel extends React.Component<RootProps, {}> {
               emptyText: (
                 <StatusTip
                   status="empty"
-                  emptyText={<div className="text-center">{t('该业务没有集群配额限制')}</div>}
+                  emptyText={<div className="text-center">{t('该项目没有集群配额限制')}</div>}
                 />
               )
             })
@@ -250,7 +250,7 @@ export class ProjectDetailResourcePanel extends React.Component<RootProps, {}> {
       <Modal visible={this.state.isShowDeleteDialog} caption={t('解除集群关联')} onClose={() => cancel()}>
         <Modal.Body>
           <FormPanel.InlineText>
-            {t('确定要删除业务和{{clusterName}}的关联么？', {
+            {t('确定要删除项目和{{clusterName}}的关联么？', {
               clusterName: clusterName
             })}
           </FormPanel.InlineText>

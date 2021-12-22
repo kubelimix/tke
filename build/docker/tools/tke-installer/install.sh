@@ -30,18 +30,18 @@ export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 VERSION=latest
 
-INSTALL_DIR=/opt/tke-installer
+INSTALL_DIR=/opt/kx-installer
 DATA_DIR=$INSTALL_DIR/data
 REGISTRY_DIR=$INSTALL_DIR/registry
 REGISTRY_VERSION=2.7.1
-OPTIONS="--name tke-installer -d --privileged --net=host --restart=always
+OPTIONS="--name kx-installer -d --privileged --net=host --restart=always
 -v /etc/hosts:/app/hosts
 -v $DATA_DIR:/app/data
 -v /var/run/containerd/containerd.sock:/var/run/containerd/containerd.sock
 -v /run/containerd/:/run/containerd/
 -v $INSTALL_DIR/conf:/app/conf
 -v registry-certs:/app/certs
--v tke-installer-bin:/app/bin
+-v kx-installer-bin:/app/bin
 "
 
 RegistryHTTPOptions="--name registry-http -d --net=host --restart=always -p 80:5000
@@ -147,21 +147,21 @@ function install_containerd() {
 }
 
 function load_image() {
-  echo "Step.3 load tke-installer image [in process]"
+  echo "Step.3 load kx-installer image [in process]"
 
-  nerdctl load -i res/tke-installer.tar
+  nerdctl load -i res/kx-installer.tar
   nerdctl load -i res/registry.tar
 
-  echo "Step.3 load tke-installer image [done]"
+  echo "Step.3 load kx-installer image [done]"
 }
 
 function clean_old_data() {
   echo "Step.4 clean old data [in process]"
 
-  nerdctl stop tke-installer >/dev/null 2>&1 && nerdctl rm tke-installer >/dev/null 2>&1 || :
+  nerdctl stop kx-installer >/dev/null 2>&1 && nerdctl rm kx-installer >/dev/null 2>&1 || :
   nerdctl stop registry-http >/dev/null 2>&1 && nerdctl rm registry-http >/dev/null 2>&1 || :
   nerdctl stop registry-https >/dev/null 2>&1 && nerdctl rm registry-https >/dev/null 2>&1 || :
-  nerdctl volume rm tke-installer-bin >/dev/null 2>&1 || :
+  nerdctl volume rm kx-installer-bin >/dev/null 2>&1 || :
   nerdctl volume rm registry-certs >/dev/null 2>&1 || :
 
   if  [ -d  "$DATA_DIR" ]; then
@@ -173,12 +173,12 @@ function clean_old_data() {
 }
 
 function start_installer() {
-  echo "Step.5 start tke-installer [in process]"
+  echo "Step.5 start kx-installer [in process]"
   mkdir -p $DATA_DIR
   mkdir -p $INSTALL_DIR/conf
-  nerdctl run $OPTIONS "tkestack/tke-installer-${ARCH}:$VERSION" $@
+  nerdctl run $OPTIONS "tkestack/kx-installer-${ARCH}:$VERSION" $@
 
-  echo "Step.5 start tke-installer [done]"
+  echo "Step.5 start kx-installer [done]"
 }
 
 function start_registry() {
@@ -199,20 +199,20 @@ function check_installer() {
   s=10
   for i in $(seq 1 $s)
   do
-    echo "Step.6 check tke-installer status [in process]"
+    echo "Step.6 check kx-installer status [in process]"
     url="http://127.0.0.1:8080/index.html"
     if ! curl -sSf "$url" >/dev/null 2>&1; then
       sleep 3
       echo "Step.6 retries left $(($s-$i))"
       continue
     else
-      echo "Step.6 check tke-installer status [done]"
+      echo "Step.6 check kx-installer status [done]"
       echo "Please use your browser which can connect this machine to open $url for install TKE!"
       exit 0
     fi
   done
   echo "check installer status error"
-  nerdctl logs tke-installer
+  nerdctl logs kx-installer
   exit 1
 }
 
