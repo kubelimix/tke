@@ -28,3 +28,19 @@ module.exports = {
 3. 以下命令均在 global 节点所在机器上执行；
 4. 执行`kubectl get po -n tke |grep gateway`找到 gateway 的名称，自行替换下方命令 gateway 名称；
 5. 执行 `kubectl cp assets tke-gateway-tjtc4://app/ -n tke` ，用新打包的文件替换掉老的文件；
+
+
+## 其他
+diff --git a/web/console/.eslintrc b/web/console/.eslintrc
+index f61d71b1..5f4d7a54 100644
+--- a/web/console/.eslintrc
++++ b/web/console/.eslintrc
+@@ -13,6 +13,7 @@
+     "@typescript-eslint/no-this-alias": 1,
+     "prefer-spread": 1,
+     "prefer-rest-params": 1,
++    "no-undef": 0,
+     "@typescript-eslint/triple-slash-reference": 1
+   }
+ }
+
